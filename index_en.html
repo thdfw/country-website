@@ -5,11 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Royal Country Riding Club | Equestrian club near Brussels</title>
     <link rel="icon" href="images/favicon.png" type="image/png" />
-    <link rel="stylesheet" href="styles.css?v=77" />
+    <link rel="stylesheet" href="styles.css?v=82" />
   </head>
   <body>
     <header class="hero">
       <div class="hero__overlay" aria-hidden="true"></div>
+      <button
+        type="button"
+        class="hero__menu-toggle"
+        aria-expanded="false"
+        aria-controls="hero-menu"
+        aria-label="Show menu"
+        data-label-hide="Hide menu"
+      >
+        <span class="hero__menu-toggle-bar" aria-hidden="true"></span>
+        <span class="hero__menu-toggle-bar" aria-hidden="true"></span>
+      </button>
       <div class="hero__brand">
         <img
           class="hero__logo"
@@ -18,47 +29,49 @@
           width="1284"
           height="816"
         />
-        <nav class="hero__nav" aria-label="Main navigation">
-          <ul class="hero__nav-list">
-            <li><a href="#about">About</a></li>
-            <li><a href="#pensions">Livery</a></li>
-            <li><a href="#riding-school">Riding school</a></li>
-            <li><a href="#bookings">Bookings</a></li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        <nav class="hero__lang" aria-label="Language">
-          <ul class="hero__lang-list">
-            <li>
-              <a
-                class="hero__lang-link"
-                href="index_nl.html"
-                hreflang="nl-BE"
-                lang="nl-BE"
-                >Nederlands</a
-              >
-            </li>
-            <li>
-              <a
-                class="hero__lang-link"
-                href="index.html"
-                hreflang="fr"
-                lang="fr"
-                >Français</a
-              >
-            </li>
-            <li>
-              <span
-                class="hero__lang-link hero__lang-link--current"
-                lang="en"
-                aria-current="page"
-                >English</span
-              >
-            </li>
-          </ul>
-        </nav>
+        <div class="hero__menu" id="hero-menu">
+          <nav class="hero__nav" aria-label="Main navigation">
+            <ul class="hero__nav-list">
+              <li><a href="#about">About</a></li>
+              <li><a href="#pensions">Livery</a></li>
+              <li><a href="#riding-school">Riding school</a></li>
+              <li><a href="#bookings">Bookings</a></li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="hero__lang" aria-label="Language">
+            <ul class="hero__lang-list">
+              <li>
+                <a
+                  class="hero__lang-link"
+                  href="index_nl.html"
+                  hreflang="nl-BE"
+                  lang="nl-BE"
+                  >Nederlands</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hero__lang-link"
+                  href="index.html"
+                  hreflang="fr"
+                  lang="fr"
+                  >Français</a
+                >
+              </li>
+              <li>
+                <span
+                  class="hero__lang-link hero__lang-link--current"
+                  lang="en"
+                  aria-current="page"
+                  >English</span
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
       <div class="hero__inner">
         <h1 class="hero__title">
@@ -614,6 +627,47 @@
           infraTrigger.setAttribute("aria-expanded", String(open));
           infraPanel.setAttribute("aria-hidden", String(!open));
           infraTrigger.classList.toggle("is-open", open);
+        });
+      }
+
+      const menuToggle = document.querySelector(".hero__menu-toggle");
+      const heroMenu = document.getElementById("hero-menu");
+      const mobileNavQuery = window.matchMedia("(max-width: 768px)");
+
+      if (menuToggle && heroMenu) {
+        const menuShowLabel = menuToggle.getAttribute("aria-label");
+        const menuHideLabel = menuToggle.getAttribute("data-label-hide");
+
+        function setHeroMenuOpen(open) {
+          heroMenu.classList.toggle("is-open", open);
+          menuToggle.classList.toggle("is-open", open);
+          menuToggle.setAttribute("aria-expanded", String(open));
+          if (menuShowLabel && menuHideLabel) {
+            menuToggle.setAttribute(
+              "aria-label",
+              open ? menuHideLabel : menuShowLabel
+            );
+          }
+        }
+
+        function closeHeroMenuIfMobile() {
+          if (mobileNavQuery.matches) setHeroMenuOpen(false);
+        }
+
+        menuToggle.addEventListener("click", () => {
+          setHeroMenuOpen(!heroMenu.classList.contains("is-open"));
+        });
+
+        heroMenu.querySelectorAll(".hero__nav-list a").forEach((link) => {
+          link.addEventListener("click", closeHeroMenuIfMobile);
+        });
+
+        mobileNavQuery.addEventListener("change", (event) => {
+          if (!event.matches) setHeroMenuOpen(false);
+        });
+
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") closeHeroMenuIfMobile();
         });
       }
     </script>
