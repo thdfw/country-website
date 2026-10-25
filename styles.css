@@ -704,13 +704,18 @@ img.content-section__photo {
 
 .pensions__lead-photo {
   display: block;
-  width: 100%;
-  max-width: 100%;
-  margin: 0;
   aspect-ratio: auto;
   height: auto;
   object-fit: cover;
   object-position: center;
+}
+
+@media (min-width: 769px) {
+  .pensions__lead-photo {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
 }
 
 .pensions__photos {
@@ -724,6 +729,16 @@ img.content-section__photo {
   aspect-ratio: auto;
   height: auto;
   object-fit: unset;
+}
+
+@media (max-width: 768px) {
+  .welcome__photo {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    border-radius: 0;
+  }
 }
 
 .page-end-photo {
