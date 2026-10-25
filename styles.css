@@ -105,6 +105,48 @@ body {
   opacity: 0.72;
 }
 
+.hero__lang {
+  width: max-content;
+  max-width: 100%;
+}
+
+.hero__lang-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.125rem 0.5rem;
+}
+
+.hero__lang-list li:not(:first-child)::before {
+  content: "/";
+  margin-right: 0.5rem;
+  color: rgba(15, 31, 61, 0.35);
+  font-weight: 300;
+}
+
+.hero__lang-link {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: clamp(0.6875rem, 0.62rem + 0.35vw, 0.8125rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: #0f1f3d;
+  transition: opacity 0.2s ease;
+}
+
+a.hero__lang-link:hover {
+  opacity: 0.72;
+}
+
+.hero__lang-link--current {
+  font-weight: 500;
+  color: #0f1f3d;
+}
+
 .hero__overlay {
   position: absolute;
   inset: 0;
@@ -180,6 +222,10 @@ body {
   font-size: clamp(2.5rem, 6.5vw, 4.75rem);
   line-height: 1.05;
   letter-spacing: -0.02em;
+}
+
+html[lang="en"] .hero__title {
+  max-width: 16ch;
 }
 
 .hero__aside {
