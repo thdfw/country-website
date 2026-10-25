@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Royal Country Riding Club | Equestrian Club in Brussels</title>
+    <title>Royal Country Riding Club | Club équestre à Bruxelles</title>
     <link rel="icon" href="favicon.png" type="image/png" />
-    <link rel="stylesheet" href="styles.css?v=28" />
+    <link rel="stylesheet" href="styles.css?v=72" />
   </head>
   <body>
     <header class="hero">
@@ -18,12 +18,12 @@
           width="1284"
           height="816"
         />
-        <nav class="hero__nav" aria-label="Main">
+        <nav class="hero__nav" aria-label="Navigation principale">
           <ul class="hero__nav-list">
-            <li><a href="#about">About</a></li>
-            <li><a href="#owners">Owners</a></li>
-            <li><a href="#riding-school">Riding school</a></li>
-            <li><a href="#bookings">Bookings</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#pensions">Pensions</a></li>
+            <li><a href="#riding-school">École d'équitation</a></li>
+            <li><a href="#bookings">Réservations</a></li>
             <li>
               <a href="#contact">Contact</a>
             </li>
@@ -32,14 +32,14 @@
       </div>
       <div class="hero__inner">
         <h1 class="hero__title">
-          Riding paradise in 
-          Brussels.
+          Paradis équestre à 
+          Bruxelles.
         </h1>
         <!--
         <div class="hero__aside">
           <p class="hero__lead">
-            The Royal Country Club is an exceptional equestrian club located just
-            outside of Brussels.
+            Le Royal Country Club est un club équestre exceptionnel situé juste
+            à l'extérieur de Bruxelles.
           </p>
           <div class="hero__actions">
             <a
@@ -47,13 +47,13 @@
               href="https://maps.app.goo.gl/N6uE9T91Db1KYwo18?g_st=iw"
               target="_blank"
               rel="noopener noreferrer"
-              >Access</a>
+              >Accès</a>
           </div>
         </div>
         -->
       </div>
       <a href="#about" class="hero__cta"
-        ><span class="hero__cta-label">Discover</span
+        ><span class="hero__cta-label">Découvrir</span
         ><span class="hero__cta-icon" aria-hidden="true"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
@@ -73,27 +73,32 @@
     <main>
       <section class="welcome" id="about">
       <div class="welcome__inner">
-        <h2 class="welcome__title">An exceptional equestrian club</h2>
+        <h2 class="welcome__title">Un centre équestre d'exception</h2>
         <div class="welcome__columns">
+          <div class="welcome__column">
+            <p class="welcome__text">
+              Situé à Overijse, à quelques minutes de Bruxelles et aux portes de la forêt de Soignes, le Royal Country
+              Riding Club bénéficie d’un cadre verdoyant et privilégié, idéal pour vivre pleinement sa passion du cheval. 
+              
+              <br><br>Le Country offre deux pistes extérieures, un manège couvert, 60 boxes, un marcheur, de nombreuses prairies et un accès direct à la forêt de Soignes.
+              
+              
+            </p>
+          </div>
           <p class="welcome__text">
-            The Royal Country Club is an exceptional equestrian club located just
-            outside of Brussels. Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-            irure dolor in reprehenderit in voluptate velit esse cillum dolore
-            eu fugiat nulla pariatur.
-          </p>
-          <p class="welcome__text">
-            Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum. Curabitur pretium tincidunt lacus.
+            Que vous soyez cavalier amateur ou confirmé, seul, en famille ou entre amis, le Country est un lieu où se rencontrent passion de l’équitation, convivialité et bien-être des chevaux. Nous souhaitons offrir à chacun un environnement de qualité, propice
+            à la pratique de l’équitation et au plaisir de partager cette passion
+            au quotidien.
           </p>
         </div>
         <div class="welcome__actions">
-          <a class="welcome__cta" href="#"
-            ><span class="welcome__cta-label">Our infrastructure</span
+          <button
+            type="button"
+            class="welcome__cta welcome__infrastructures-trigger"
+            aria-expanded="false"
+            aria-controls="welcome-infrastructures-panel"
+          >
+            <span class="welcome__cta-label">Nos infrastructures</span
             ><span class="welcome__cta-icon" aria-hidden="true"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -102,19 +107,20 @@
                 aria-hidden="true"
               >
                 <path
-                  d="M5 12h10M13 8l4 4-4 4"
+                  d="M7 10l5 5 5-5"
                   stroke="currentColor"
                   stroke-width="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                /></svg></span
-            ></a>
+                /></svg
+            ></span>
+          </button>
           <a
             class="welcome__cta welcome__cta--outline"
             href="https://maps.app.goo.gl/N6uE9T91Db1KYwo18?g_st=iw"
             target="_blank"
             rel="noopener noreferrer"
-            ><span class="welcome__cta-label">How to get here</span
+            ><span class="welcome__cta-label">S'y rendre</span
             ><span class="welcome__cta-icon" aria-hidden="true"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -131,89 +137,387 @@
                 /></svg></span
             ></a>
         </div>
+        <div
+          class="welcome__infrastructures-panel"
+          id="welcome-infrastructures-panel"
+          aria-hidden="true"
+        >
+          <div class="welcome__infrastructures-panel-inner">
+            <h3 class="welcome__infrastructures-heading">
+              Un club qui se renouvelle, une passion qui nous rassemble
+            </h3>
+            <p class="welcome__text">
+              Aujourd’hui, le club dispose de belles infrastructures récemment
+              rénovées pour accueillir chevaux et cavaliers dans les meilleures
+              conditions&nbsp;:
+            </p>
+            <ul class="welcome__infrastructures-list">
+              <li>
+                <strong>Un manège couvert</strong> entièrement rénové de 22 ×
+                45 mètres
+              </li>
+              <li>
+                <strong>Deux pistes extérieures</strong> de 65 × 75 mètres et
+                de 25 × 45 mètres
+              </li>
+              <li>
+                <strong>60 boxes</strong> confortables, dont une partie a été
+                totalement refaite
+              </li>
+              <li>
+                <strong>Un marcheur</strong> neuf, pour favoriser le mouvement
+                et le bien-être des chevaux
+              </li>
+              <li>
+                <strong>Des paddocks d’hiver</strong>, pour permettre aux
+                chevaux de profiter de sorties pendant la saison froide
+              </li>
+              <li>
+                <strong>De nombreuses prairies</strong>, pour offrir aux
+                chevaux des espaces de détente en plein air
+              </li>
+              <li>
+                <strong>Des espaces de détente et des équipements adaptés</strong>
+                à la vie quotidienne du club
+              </li>
+              <li>
+                <strong>Un accès direct à la forêt de Soignes</strong>, avec
+                des dizaines de kilomètres de chemins de promenade réservés aux
+                chevaux et aux cavaliers
+              </li>
+            </ul>
+          </div>
+        </div>
         <img
           class="welcome__photo"
           src="photos/drone_ensemble.jpg"
-          alt="Aerial view of the Royal Country Riding Club facilities"
+          alt="Vue aérienne des installations du Royal Country Riding Club"
           width="1920"
           height="1080"
         />
       </div>
       </section>
-      <section class="content-section" id="owners">
+      <section class="content-section" id="pensions">
         <div class="content-section__inner">
-          <h2 class="content-section__title">Owners</h2>
-          <div class="content-section__split">
-            <div class="content-section__body">
-              <p class="content-section__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-              <p class="content-section__text">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                anim id est laborum.
-              </p>
+          <h2 class="content-section__title">Pensions et Services</h2>
+          <div class="content-section__body">
+            <p class="content-section__text">
+              Au Royal Country Club, nous prenons soin de votre cheval au
+              quotidien et vous simplifions la vie. Notre priorité : le bien-être de votre cheval et votre plaisir de
+              monter au club.
+            </p>
+            <ul class="feature-grid feature-grid--three">
+              <li class="feature-grid__item">
+                <div class="feature-grid__icon" aria-hidden="true">
+                  <img
+                    src="icons/pension-stable.png"
+                    alt=""
+                    width="26"
+                    height="26"
+                  />
+                </div>
+                <div class="feature-grid__body">
+                  <h3 class="feature-grid__title">Pension</h3>
+                  <p class="feature-grid__text">
+                    Box, foin et alimentation adaptés.
+                  </p>
+                </div>
+              </li>
+              <li class="feature-grid__item">
+                <div class="feature-grid__icon" aria-hidden="true">
+                  <img
+                    src="icons/cours-prives-horse-rider.png"
+                    alt=""
+                    width="26"
+                    height="26"
+                  />
+                </div>
+                <div class="feature-grid__body">
+                  <h3 class="feature-grid__title">Travail du cheval</h3>
+                  <p class="feature-grid__text">Longe et monte.</p>
+                </div>
+              </li>
+              <li class="feature-grid__item">
+                <div class="feature-grid__icon" aria-hidden="true">
+                  <img
+                    src="icons/tonte-clippers.png"
+                    alt=""
+                    width="26"
+                    height="26"
+                  />
+                </div>
+                <div class="feature-grid__body">
+                  <h3 class="feature-grid__title">Tonte</h3>
+                  <p class="feature-grid__text">
+                    Selon la saison et les besoins.
+                  </p>
+                </div>
+              </li>
+              <li class="feature-grid__item">
+                <div class="feature-grid__icon" aria-hidden="true">
+                  <img
+                    src="icons/soins-health-insurance.png"
+                    alt=""
+                    width="26"
+                    height="26"
+                  />
+                </div>
+                <div class="feature-grid__body">
+                  <h3 class="feature-grid__title">Suivi des soins</h3>
+                  <p class="feature-grid__text">
+                    Vaccinations, vermifuges avec le vétérinaire du club.
+                  </p>
+                </div>
+              </li>
+              <li class="feature-grid__item">
+                <div class="feature-grid__icon" aria-hidden="true">
+                  <img
+                    src="icons/concours-jumping-horse.png"
+                    alt=""
+                    width="26"
+                    height="26"
+                  />
+                </div>
+                <div class="feature-grid__body">
+                  <h3 class="feature-grid__title">Concours</h3>
+                  <p class="feature-grid__text">
+                    Transport, organisation logistique avec nos instructeurs.
+                  </p>
+                </div>
+              </li>
+              <li class="feature-grid__item">
+                <div class="feature-grid__icon" aria-hidden="true">
+                  <img
+                    src="icons/sorties-tree.png"
+                    alt=""
+                    width="26"
+                    height="26"
+                  />
+                </div>
+                <div class="feature-grid__body">
+                  <h3 class="feature-grid__title">Sorties et mouvement</h3>
+                  <p class="feature-grid__text">Prairie et/ou marcheur.</p>
+                </div>
+              </li>
+              <li class="feature-grid__item">
+                <div class="feature-grid__icon" aria-hidden="true">
+                  <img
+                    src="icons/cours-prives-horse-rider.png"
+                    alt=""
+                    width="26"
+                    height="26"
+                  />
+                </div>
+                <div class="feature-grid__body">
+                  <h3 class="feature-grid__title">Cours privés</h3>
+                  <p class="feature-grid__text">
+                    Jumping, dressage et équitation générale avec nos
+                    instructeurs, ou avec votre instructeur personnel.
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <div class="content-section__actions">
+              <a
+                class="welcome__cta"
+                href="tarifs.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Tarifs pension &amp; services</a>
             </div>
-            <div class="content-section__photo" aria-hidden="true"></div>
+            <img
+              class="welcome__photo pensions__lead-photo"
+              src="photos/boxes.jpg"
+              alt="Boxes du Royal Country Riding Club"
+              width="1561"
+              height="808"
+              loading="lazy"
+            />
+          </div>
+          <div class="pensions__photos">
+            <img
+              class="welcome__photo pensions__photo"
+              src="photos/jump.jpg"
+              alt="Cavalier lors d'un concours au Royal Country Club"
+              width="1179"
+              height="541"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
       <section class="content-section" id="riding-school">
         <div class="content-section__inner">
-          <h2 class="content-section__title">Riding school</h2>
-          <div class="content-section__split content-section__split--reverse">
-            <div class="content-section__photo" aria-hidden="true"></div>
-            <div class="content-section__body">
-              <p class="content-section__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
-              </p>
-              <p class="content-section__text">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                anim id est laborum.
-              </p>
+          <h2 class="content-section__title">École d'équitation</h2>
+          <div class="riding-school__layout">
+            <div class="riding-school__content" lang="fr">
+              <div class="content-section__body">
+                <p class="content-section__text">
+                  Offrez à vos enfants une expérience équestre unique, alliant
+                  passion, pédagogie et convivialité. Au cœur d'un cadre
+                  magnifique et au sein d'infrastructures de haute qualité, notre
+                  école est spécialement conçue pour accompagner les jeunes
+                  cavaliers dans leur apprentissage, du tout premier contact au
+                  perfectionnement.
+                </p>
+              </div>
+              <div class="content-section__detail">
+            <ul class="feature-grid feature-grid--two">
+              <li class="feature-grid__item">
+                <div class="feature-grid__icon" aria-hidden="true">
+                  <img
+                    src="icons/ecole-animal.png"
+                    alt=""
+                    width="26"
+                    height="26"
+                  />
+                </div>
+                <div class="feature-grid__body">
+                  <h3 class="feature-grid__title">
+                    Une équipe passionnée et qualifiée
+                  </h3>
+                  <p class="feature-grid__text">
+                    Nos instructeurs diplômés, motivés et bienveillants mettent
+                    leur savoir-faire au service de l'épanouissement de chaque
+                    élève.
+                  </p>
+                </div>
+              </li>
+              <li class="feature-grid__item">
+                <div class="feature-grid__icon" aria-hidden="true">
+                  <img
+                    src="icons/ecole-helmet.png"
+                    alt=""
+                    width="26"
+                    height="26"
+                  />
+                </div>
+                <div class="feature-grid__body">
+                  <h3 class="feature-grid__title">
+                    Cours en effectif réduit (3 à 4 cavaliers max)
+                  </h3>
+                  <p class="feature-grid__text">
+                    Grâce à un suivi ultra-personnalisé, chaque jeune progresse à
+                    son rythme, en toute sécurité et beaucoup plus rapidement.
+                  </p>
+                </div>
+              </li>
+              <li class="feature-grid__item">
+                <div class="feature-grid__icon" aria-hidden="true">
+                  <img
+                    src="icons/ecole-horseshoe.png"
+                    alt=""
+                    width="26"
+                    height="26"
+                  />
+                </div>
+                <div class="feature-grid__body">
+                  <h3 class="feature-grid__title">
+                    Une approche complète du cheval
+                  </h3>
+                  <p class="feature-grid__text">
+                    Parce qu'apprendre à monter commence aux écuries, nous
+                    enseignons les bases de l'équitation, mais aussi les soins, le
+                    pansement et la préparation du cheval avant et après la monte.
+                  </p>
+                </div>
+              </li>
+              <li class="feature-grid__item">
+                <div class="feature-grid__icon" aria-hidden="true">
+                  <img
+                    src="icons/ecole-happiness.png"
+                    alt=""
+                    width="26"
+                    height="26"
+                  />
+                </div>
+                <div class="feature-grid__body">
+                  <h3 class="feature-grid__title">
+                    Une ambiance familiale et conviviale
+                  </h3>
+                  <p class="feature-grid__text">
+                    Le plaisir de monter et le respect de l'animal sont au centre
+                    de tous nos cours, dans un esprit de partage et de camaraderie.
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <div class="content-section__actions">
+              <a
+                class="welcome__cta"
+                href="inscriptions_cours.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Formulaire d'inscription</a>
+              <a
+                class="welcome__cta welcome__cta--outline"
+                href="tarifs_cours.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Tarifs des cours</a>
+              <span class="welcome__cta welcome__cta--disabled"
+                >Stages (à partir de printemps 2027)</span>
             </div>
+              </div>
+            </div>
+            <img
+              class="riding-school__photo"
+              src="photos/riding.jpg"
+              alt="Cavaliers de l'école d'équitation au Royal Country Club"
+              width="2099"
+              height="3191"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
       <section class="bookings" id="bookings">
         <div class="bookings__inner">
-          <h2 class="bookings__title">Bookings</h2>
+          <h2 class="bookings__title">Réservations</h2>
           <div class="bookings__columns">
             <div class="bookings__column">
               <p class="bookings__text">
-                To book an arena for an hour or more, book online in a few clicks. This is available for all riders, not only members. Available times are limited, so it's best to book early!
+                Pour réserver un droit de piste pour une heure ou plus,
+                réservez en ligne en quelques clics. C'est ouvert à tous les
+                cavaliers, pas seulement aux membres. Les créneaux sont limités
+                : mieux vaut réserver tôt !
               </p>
               <a
                 class="bookings__cta"
                 href="https://bookings.royalcountryclub.be/arena.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                >Book an arena</a>
+                >Réserver un droit de piste</a>
             </div>
             <div class="bookings__column">
               <p class="bookings__text">
-                Instructors: schedule your lessons in the booking system so
-                arena availability stays clear for riders and staff. This portal is only available for instructors and requires a login.
+                Moniteurs : planifiez vos cours dans le système de réservation
+                afin que la disponibilité des pistes reste claire pour les
+                cavaliers et le personnel. Ce portail est réservé aux moniteurs
+                et nécessite une connexion.
               </p>
               <a
                 class="bookings__cta bookings__cta--outline"
                 href="https://bookings.royalcountryclub.be/lessons.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                >Instructor portal</a>
+                >Portail moniteurs</a>
             </div>
           </div>
         </div>
       </section>
+      <div class="page-end-photo">
+        <div class="page-end-photo__inner">
+          <img
+            class="welcome__photo pensions__photo"
+            src="photos/prairies.jpeg"
+            alt="Chevaux aux prairies du Royal Country Club"
+            width="7360"
+            height="4912"
+            loading="lazy"
+          />
+        </div>
+      </div>
       <section class="contact" id="contact">
         <div class="contact__inner">
           <div class="contact__grid">
@@ -227,26 +531,41 @@
               />
             </div>
             <div class="contact__item">
-              <h3 class="contact__label">Address</h3>
+              <h3 class="contact__label">Adresse</h3>
               <p class="contact__value">
                 Welriekendedreef 99<br />
-                3090 Overijse, Belgium
+                3090 Overijse, Belgique
               </p>
             </div>
             <div class="contact__item">
-              <h3 class="contact__label">Email</h3>
+              <h3 class="contact__label">E-mail</h3>
               <p class="contact__value">
                 <a href="mailto:info@royalcountryclub.be"
                   >info@royalcountryclub.be</a>
               </p>
             </div>
             <div class="contact__item">
-              <h3 class="contact__label">Phone</h3>
+              <h3 class="contact__label">Horaires</h3>
               <p class="contact__value">
-                <a href="tel:+3226571135">+32 2 657 11 35</a>
+                Tous les jours<br />
+                7h - 21h
               </p>
             </div>
           </div>
+          <p class="contact__copyright">
+            © 2026 Royal Country Riding Club. Tous droits réservés.
+          </p>
+          <p class="contact__attribution">
+            Icônes
+            <a
+              href="https://www.flaticon.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Flaticon</a
+            >
+            (Made by Made Premium, Smashicons, Magnific, Vectoricons, Pike
+            Picture, Amoghdesign, Andinur)
+          </p>
         </div>
       </section>
     </main>
@@ -265,6 +584,19 @@
           history.pushState(null, "", id);
         });
       });
+
+      const infraTrigger = document.querySelector(
+        ".welcome__infrastructures-trigger"
+      );
+      const infraPanel = document.getElementById("welcome-infrastructures-panel");
+      if (infraTrigger && infraPanel) {
+        infraTrigger.addEventListener("click", () => {
+          const open = infraPanel.classList.toggle("is-open");
+          infraTrigger.setAttribute("aria-expanded", String(open));
+          infraPanel.setAttribute("aria-hidden", String(!open));
+          infraTrigger.classList.toggle("is-open", open);
+        });
+      }
     </script>
   </body>
 </html>
