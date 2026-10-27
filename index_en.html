@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Royal Country Riding Club | Equestrian club near Brussels</title>
     <link rel="icon" href="images/favicon.png" type="image/png" />
-    <link rel="stylesheet" href="styles.css?v=82" />
+    <link rel="stylesheet" href="styles.css?v=86" />
   </head>
   <body>
     <header class="hero">
@@ -114,9 +114,9 @@
       ></a>
     </header>
     <main>
-      <section class="welcome" id="about">
+      <section class="welcome">
       <div class="welcome__inner">
-        <h2 class="welcome__title">A premier equestrian centre</h2>
+        <h2 class="welcome__title" id="about">A premier equestrian centre</h2>
         <div class="welcome__columns">
           <div class="welcome__column">
             <p class="welcome__text">
@@ -235,9 +235,9 @@
         />
       </div>
       </section>
-      <section class="content-section" id="pensions">
+      <section class="content-section content-section--pensions">
         <div class="content-section__inner">
-          <h2 class="content-section__title">Livery &amp; services</h2>
+          <h2 class="content-section__title" id="pensions">Livery &amp; services</h2>
           <div class="content-section__body">
             <p class="content-section__text">
               At Royal Country Club we look after your horse day to day and make life easier for you. Our priorities are your horse’s welfare and your enjoyment of
@@ -383,9 +383,9 @@
           </div>
         </div>
       </section>
-      <section class="content-section" id="riding-school">
+      <section class="content-section content-section--riding-school">
         <div class="content-section__inner">
-          <h2 class="content-section__title">Riding school</h2>
+          <h2 class="content-section__title" id="riding-school">Riding school</h2>
           <div class="riding-school__layout">
             <div class="riding-school__content" lang="en">
               <div class="content-section__body">
@@ -498,14 +498,13 @@
               alt="Riding school pupils at Royal Country Club"
               width="2099"
               height="3191"
-              loading="lazy"
             />
           </div>
         </div>
       </section>
-      <section class="bookings" id="bookings">
+      <section class="bookings">
         <div class="bookings__inner">
-          <h2 class="bookings__title">Bookings</h2>
+          <h2 class="bookings__title" id="bookings">Bookings</h2>
           <div class="bookings__columns">
             <div class="bookings__column">
               <p class="bookings__text">
@@ -602,21 +601,6 @@
       </section>
     </main>
     <script>
-      document.querySelectorAll('a[href^="#"]').forEach((link) => {
-        link.addEventListener("click", (event) => {
-          const id = link.getAttribute("href");
-          if (!id || id === "#") return;
-          const target = document.querySelector(id);
-          if (!target) return;
-          event.preventDefault();
-          const smooth = !window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-          ).matches;
-          target.scrollIntoView({ behavior: smooth ? "smooth" : "auto" });
-          history.pushState(null, "", id);
-        });
-      });
-
       const infraTrigger = document.querySelector(
         ".welcome__infrastructures-trigger"
       );

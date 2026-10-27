@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Royal Country Riding Club | Club équestre à Bruxelles</title>
     <link rel="icon" href="images/favicon.png" type="image/png" />
-    <link rel="stylesheet" href="styles.css?v=82" />
+    <link rel="stylesheet" href="styles.css?v=86" />
   </head>
   <body>
     <header class="hero">
@@ -114,9 +114,9 @@
       ></a>
     </header>
     <main>
-      <section class="welcome" id="about">
+      <section class="welcome">
       <div class="welcome__inner">
-        <h2 class="welcome__title">Un centre équestre d'exception</h2>
+        <h2 class="welcome__title" id="about">Un centre équestre d'exception</h2>
         <div class="welcome__columns">
           <div class="welcome__column">
             <p class="welcome__text">
@@ -240,9 +240,9 @@
         />
       </div>
       </section>
-      <section class="content-section" id="pensions">
+      <section class="content-section content-section--pensions">
         <div class="content-section__inner">
-          <h2 class="content-section__title">Pensions et Services</h2>
+          <h2 class="content-section__title" id="pensions">Pensions et Services</h2>
           <div class="content-section__body">
             <p class="content-section__text">
               Au Royal Country Club, nous prenons soin de votre cheval au
@@ -389,9 +389,9 @@
           </div>
         </div>
       </section>
-      <section class="content-section" id="riding-school">
+      <section class="content-section content-section--riding-school">
         <div class="content-section__inner">
-          <h2 class="content-section__title">École d'équitation</h2>
+          <h2 class="content-section__title" id="riding-school">École d'équitation</h2>
           <div class="riding-school__layout">
             <div class="riding-school__content" lang="fr">
               <div class="content-section__body">
@@ -509,14 +509,13 @@
               alt="Cavaliers de l'école d'équitation au Royal Country Club"
               width="2099"
               height="3191"
-              loading="lazy"
             />
           </div>
         </div>
       </section>
-      <section class="bookings" id="bookings">
+      <section class="bookings">
         <div class="bookings__inner">
-          <h2 class="bookings__title">Réservations</h2>
+          <h2 class="bookings__title" id="bookings">Réservations</h2>
           <div class="bookings__columns">
             <div class="bookings__column">
               <p class="bookings__text">
@@ -613,21 +612,6 @@
       </section>
     </main>
     <script>
-      document.querySelectorAll('a[href^="#"]').forEach((link) => {
-        link.addEventListener("click", (event) => {
-          const id = link.getAttribute("href");
-          if (!id || id === "#") return;
-          const target = document.querySelector(id);
-          if (!target) return;
-          event.preventDefault();
-          const smooth = !window.matchMedia(
-            "(prefers-reduced-motion: reduce)"
-          ).matches;
-          target.scrollIntoView({ behavior: smooth ? "smooth" : "auto" });
-          history.pushState(null, "", id);
-        });
-      });
-
       const infraTrigger = document.querySelector(
         ".welcome__infrastructures-trigger"
       );

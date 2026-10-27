@@ -624,6 +624,13 @@ button.welcome__cta {
   padding: 0 clamp(1.25rem, 5vw, 4rem) clamp(3.5rem, 9vw, 7rem);
 }
 
+.welcome__title,
+.content-section__title,
+.bookings__title,
+.contact {
+  scroll-margin-top: 0;
+}
+
 .content-section__title {
   margin: 0 0 clamp(1.75rem, 4vw, 2.75rem);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -781,15 +788,16 @@ img.content-section__photo {
   }
 }
 
-#pensions .content-section__actions {
+.content-section--pensions .content-section__actions {
   justify-content: center;
   margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
 }
 
 .pensions__lead-photo {
   display: block;
-  aspect-ratio: auto;
+  width: 100%;
   height: auto;
+  aspect-ratio: 1561 / 808;
   object-fit: cover;
   object-position: center;
 }
@@ -810,9 +818,10 @@ img.content-section__photo {
 }
 
 .pensions__photo {
-  aspect-ratio: auto;
+  width: 100%;
   height: auto;
-  object-fit: unset;
+  aspect-ratio: 1179 / 541;
+  object-fit: cover;
 }
 
 @media (max-width: 768px) {
@@ -850,7 +859,7 @@ img.content-section__photo {
   min-width: 0;
 }
 
-#riding-school .content-section__detail {
+.content-section--riding-school .content-section__detail {
   margin-top: clamp(0.75rem, 2vw, 1rem);
 }
 
@@ -858,6 +867,8 @@ img.content-section__photo {
   display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: 2099 / 3191;
+  object-fit: cover;
   border-radius: 4px;
 }
 
@@ -921,7 +932,7 @@ img.content-section__photo {
     clamp(3.5rem, 9vw, 7rem);
 }
 
-#bookings .bookings__inner {
+.bookings .bookings__inner {
   padding-bottom: clamp(2rem, 4.5vw, 3rem);
 }
 
